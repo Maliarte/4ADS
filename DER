@@ -1,46 +1,17 @@
-| Entidade                  | Atributos                                 | Relacionamentos                                                    |
+| Entidade                  | Atributos                                 | Relacionamentos                                                      |
 |---------------------------|-------------------------------------------|----------------------------------------------------------------------|
-| Fabricante                | ID (PK), Nome                             | -                                                                  |
-| Cliente                   | ID (PK), Nome                             | -                                                                  |
-| Vendedor                  | ID (PK), Nome                             | -                                                                  |
-| Registro de Oportunidade  | ID (PK), Status_ID (FK), Outros atributos | -                                                                  |
-| ADM                       | ID (PK), Nome                             | -                                                                  |
-| Atores do Sistema         | ID (PK), Nome                             | -                                                                  |
-| Status                    | ID (PK), Descrição                        | -                                                                  |
+| Fabricante                | ID (PK), Nome                             | - Registro de Oportunidade:                                          |
+| Cliente                   | ID (PK), Nome                             | - Enviado por ADM                                                    |
+| Vendedor                  | ID (PK), Nome                             | - Aberto para Fabricante                                             |
+| Registro de Oportunidade  | ID (PK), Status_ID (FK), Outros atributos | - Referente a Cliente                                                |
+| ADM                       | ID (PK), Nome                             | - Gerenciado por Vendedor                                            |
+| Atores do Sistema         | ID (PK), Nome                             | - Solicita abertura para Fabricante                                  |
+| Status                    | ID (PK), Descrição                        | -  Possui Status                                                     |
 
-### Relacionamentos:
-
-- Registro de Oportunidade:
-  - Enviado por ADM
-  - Aberto para Fabricante
-  - Referente a Cliente
-  - Gerenciado por Vendedor
-  - Solicita abertura para Fabricante
-  - Possui Status
 
 
 ====================================
 ----------------------------------
-
-
-
-|-----------------|-----------------|-----------------|
-|   Fabricante    |     Cliente     |     Vendedor    |
-|-----------------|-----------------|-----------------|
-|     ID (PK)     |     ID (PK)     |     ID (PK)     |
-|      Nome       |      Nome       |      Nome       |
-|-----------------|-----------------|-----------------|
-|-----------------|-----------------|-----------------|
-|Registro de      |       ADM       | Atores do Sistema|
-|Oportunidade     |-----------------|-----------------|
-|     ID (PK)     |     ID (PK)     |     ID (PK)     |
-|  Status_ID (FK) |      Nome       |      Nome       |
-|-----------------|-----------------|-----------------|
-|-----------------|-----------------|-----------------|
-|                  Status                             |
-|-----------------|-----------------|-----------------|
-|     ID (PK)     |     Descrição   |                 |
-|-----------------|-----------------|-----------------|
 
 
 
